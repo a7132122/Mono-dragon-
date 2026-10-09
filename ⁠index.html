@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>官方粉專 & 社群傳送門</title>
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.05); }
+    }
+    .animate-glow { animation: pulseGlow 4s infinite ease-in-out; }
+    .glass-card {
+      background: rgba(17, 24, 39, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans selection:bg-indigo-500 selection:text-white">
+
+  <!-- 背景動態光暈 -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl animate-glow"></div>
+    <div class="absolute top-1/3 -right-32 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-glow" style="animation-delay: 2s;"></div>
+  </div>
+
+  <main class="relative z-10 max-w-lg mx-auto px-4 py-8 flex flex-col items-center">
+
+    <!-- 個人/粉專頭像與簡介 -->
+    <div class="relative group mb-4">
+      <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full blur opacity-70 group-hover:opacity-100 transition duration-300"></div>
+      <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=300&auto=format&fit=crop&q=80" 
+           alt="Avatar" 
+           class="relative w-28 h-28 rounded-full object-cover border-2 border-slate-700 shadow-xl" />
+    </div>
+
+    <div class="text-center space-y-1 mb-6">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-medium mb-1">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span>最新企劃進行中</span>
+      </div>
+      <h1 class="text-2xl font-bold tracking-tight text-white flex items-center justify-center gap-1.5">
+        官方社群傳送門
+        <i data-lucide="check-circle-2" class="w-5 h-5 text-sky-400 fill-sky-400/20"></i>
+      </h1>
+      <p class="text-slate-400 text-sm max-w-xs mx-auto">
+        歡迎追蹤我的粉絲專頁與各大社群平台，即時掌握最新消息與創作動態！
+      </p>
+    </div>
+
+    <!-- 連結清單 -->
+    <div class="w-full space-y-3">
+
+      <!-- Facebook 粉專（主打卡片） -->
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+         class="glass-card hover:bg-slate-800/80 p-4 rounded-2xl flex items-center justify-between border border-blue-500/30 shadow-lg shadow-blue-500/10 transition-all hover:scale-[1.02] active:scale-[0.98]">
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400">
+            <i data-lucide="facebook" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="font-bold text-base text-white flex items-center gap-1.5">
+              Facebook 粉絲專頁
+              <span class="text-[10px] bg-blue-500/20 text-blue-300 px-1.5 py-0.5 rounded">主推</span>
+            </div>
+            <div class="text-xs text-slate-400">追蹤粉專最新日常與文章</div>
+          </div>
+        </div>
+        <i data-lucide="external-link" class="w-5 h-5 text-slate-400"></i>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+         class="glass-card hover:bg-slate-800/80 p-4 rounded-2xl flex items-center justify-between transition-all hover:scale-[1.02] active:scale-[0.98]">
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-xl bg-pink-600/20 border border-pink-500/30 flex items-center justify-center text-pink-400">
+            <i data-lucide="instagram" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="font-bold text-base text-white">Instagram</div>
+            <div class="text-xs text-slate-400">精彩照片圖輯與限時動態</div>
+          </div>
+        </div>
+        <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400"></i>
+      </a>
+
+      <!-- YouTube -->
+      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+         class="glass-card hover:bg-slate-800/80 p-4 rounded-2xl flex items-center justify-between transition-all hover:scale-[1.02] active:scale-[0.98]">
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-xl bg-red-600/20 border border-red-500/30 flex items-center justify-center text-red-400">
+            <i data-lucide="youtube" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="font-bold text-base text-white">YouTube 頻道</div>
+            <div class="text-xs text-slate-400">觀看長片、精華短片與直播</div>
+          </div>
+        </div>
+        <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400"></i>
+      </a>
+
+      <!-- Discord -->
+      <a href="https://discord.com" target="_blank" rel="noopener noreferrer"
+         class="glass-card hover:bg-slate-800/80 p-4 rounded-2xl flex items-center justify-between transition-all hover:scale-[1.02] active:scale-[0.98]">
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+            <i data-lucide="message-square" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="font-bold text-base text-white">Discord 交流群</div>
+            <div class="text-xs text-slate-400">加入同好聊天交流語音室</div>
+          </div>
+        </div>
+        <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400"></i>
+      </a>
+
+    </div>
+
+    <!-- 底部版權宣告 -->
+    <footer class="mt-12 text-center text-xs text-slate-500">
+      <p>© 2026 個人品牌官方網站. All rights reserved.</p>
+    </footer>
+
+  </main>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
